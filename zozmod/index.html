@@ -1,0 +1,921 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ZoZ MOD - Premium Game Mods & Apps</title>
+    <meta name="description" content="Your ultimate destination for apps games , updates, and enhanced gaming experiences. Discover, download, and transform your gameplay.">
+    
+    <!-- Open Graph Meta Tags for SEO -->
+    <meta property="og:title" content="ZOZMOD - Discover, Download & Explore">
+    <meta property="og:description" content="Your ultimate destination for apps games Mods , updates, and enhanced gaming experiences.">
+    <meta property="og:image" content="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjJti72WcjLUQTG9f0VNz_GT-3eWHWaC4a-LVJURNmC36fphC2XSRPnI-UKIYcj6BWIufff7eeXOBOcbJa-_xB4bg8gYmQ6hsZPbOl3VfNegirz2IsrwVs04Bh_jhvo4x1MQ1hYJxEKJ98tlqLyc2TMLW0L9EeSHWV5DAen-ygBt5mIhDeKw5cV4Z0j-I0/s320/5832605763548334102.jpg">
+    <meta property="og:url" content="https://zozmod.online">
+    
+    <!-- Font Awesome and Google Fonts -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        primary: {
+                            light: '#28A745',
+                            dark: '#3b82f6'
+                        },
+                        secondary: {
+                            light: '#60a5fa',
+                            dark: '#28A745'
+                        },
+                        dark: {
+                            light: '#f8f9fa',
+                            dark: '#0f172a'
+                        },
+                        card: {
+                            light: '#ffffff',
+                            dark: '#1e293b'
+                        },
+                        text: {
+                            light: '#333333',
+                            dark: '#94a3b8'
+                        }
+                    },
+                    animation: {
+                        'float': 'float 3s ease-in-out infinite',
+                        'fade-in': 'fadeIn 0.5s ease-in',
+                        'slide-up': 'slideUp 0.5s ease-out'
+                    },
+                    keyframes: {
+                        float: {
+                            '0%, 100%': { transform: 'translateY(0)' },
+                            '50%': { transform: 'translateY(-10px)' }
+                        },
+                        fadeIn: {
+                            '0%': { opacity: '0' },
+                            '100%': { opacity: '1' }
+                        },
+                        slideUp: {
+                            '0%': { transform: 'translateY(20px)', opacity: '0' },
+                            '100%': { transform: 'translateY(0)', opacity: '1' }
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-RTRWX9K59Q"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-RTRWX9K59Q');
+    </script>
+    
+    <!-- AOS Animation Library -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    
+    <!-- Favicon -->
+    <link rel="icon" href="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjJti72WcjLUQTG9f0VNz_GT-3eWHWaC4a-LVJURNmC36fphC2XSRPnI-UKIYcj6BWIufff7eeXOBOcbJa-_xB4bg8gYmQ6hsZPbOl3VfNegirz2IsrwVs04Bh_jhvo4x1MQ1hYJxEKJ98tlqLyc2TMLW0L9EeSHWV5DAen-ygBt5mIhDeKw5cV4Z0j-I0/s320/5832605763548334102.jpg" type="image/png">
+    
+    <style>
+        /* Custom styles that Tailwind can't handle easily */
+        .gradient-text {
+            background-clip: text;
+            -webkit-background-clip: text;
+            color: transparent;
+            background-image: linear-gradient(90deg, #3b82f6, #28A745);
+        }
+        
+        .download-btn {
+            background: linear-gradient(135deg, #3b82f6, #28A745);
+            transition: all 0.3s ease;
+        }
+        
+        .download-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 20px rgba(59, 130, 246, 0.3);
+        }
+        
+        .game-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 25px rgba(0, 0, 0, 0.1);
+        }
+        
+        .review-card:hover {
+            transform: scale(1.03);
+        }
+        
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: -2px;
+            left: 0;
+            background-color: currentColor;
+            transition: width 0.3s ease;
+        }
+        
+        .nav-link:hover::after {
+            width: 100%;
+        }
+        
+        /* Dark mode transitions */
+        .transition-colors {
+            transition-property: background-color, border-color, color, fill, stroke;
+            transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+            transition-duration: 300ms;
+        }
+    </style>
+</head>
+<body class="font-poppins bg-gray-50 dark:bg-dark-dark text-gray-800 dark:text-text-dark transition-colors duration-300">
+    <!-- Theme Toggle Button -->
+    <button id="theme-toggle" class="fixed top-5 left-5 z-50 w-10 h-10 rounded-full bg-white dark:bg-card-dark shadow-lg flex items-center justify-center text-primary-light dark:text-primary-dark hover:scale-110 transition-transform duration-300" aria-label="Toggle theme">
+        <i class="fas fa-moon dark:hidden"></i>
+        <i class="fas fa-sun hidden dark:block"></i>
+    </button>
+
+    <!-- Navigation -->
+    <nav class="sticky top-0 z-40 bg-white/80 dark:bg-card-dark/80 backdrop-blur-md shadow-sm">
+        <div class="container mx-auto px-4 py-3 flex justify-between items-center">
+            <div class="flex items-center space-x-3">
+                <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjJti72WcjLUQTG9f0VNz_GT-3eWHWaC4a-LVJURNmC36fphC2XSRPnI-UKIYcj6BWIufff7eeXOBOcbJa-_xB4bg8gYmQ6hsZPbOl3VfNegirz2IsrwVs04Bh_jhvo4x1MQ1hYJxEKJ98tlqLyc2TMLW0L9EeSHWV5DAen-ygBt5mIhDeKw5cV4Z0j-I0/s320/5832605763548334102.jpg" 
+                     alt="ZoZ Mod Logo" 
+                     class="w-12 h-12 rounded-full object-cover border-2 border-primary-light dark:border-primary-dark hover:scale-105 transition-transform duration-300">
+                <h1 class="text-2xl font-bold text-primary-light dark:text-primary-dark">ZoZ Mod</h1>
+            </div>
+
+            <div class="hidden md:flex space-x-8">
+                <a href="index.html" class="nav-link relative text-gray-700 dark:text-gray-300 hover:text-primary-light dark:hover:text-primary-dark font-medium">Home</a>
+                <a href="#" class="nav-link relative text-gray-700 dark:text-gray-300 hover:text-primary-light dark:hover:text-primary-dark font-medium">Mods</a>
+                <a href="" class="nav-link relative text-gray-700 dark:text-gray-300 hover:text-primary-light dark:hover:text-primary-dark font-medium">Apps</a>
+                <a href="#" class="nav-link relative text-gray-700 dark:text-gray-300 hover:text-primary-light dark:hover:text-primary-dark font-medium">About</a>
+                <a href="#" class="bg-primary-light dark:bg-primary-dark text-white px-4 py-2 rounded-lg hover:opacity-90 transition-opacity">Login</a>
+            </div>
+
+            <button id="mobile-menu-button" class="md:hidden text-gray-700 dark:text-gray-300">
+                <i class="fas fa-bars text-2xl"></i>
+            </button>
+        </div>
+
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white dark:bg-card-dark py-4 px-4 shadow-lg">
+            <div class="flex flex-col space-y-4">
+                <a href="index.html" class="text-gray-700 dark:text-gray-300 hover:text-primary-light dark:hover:text-primary-dark font-medium">Home</a>
+                <a href="#" class="text-gray-700 dark:text-gray-300 hover:text-primary-light dark:hover:text-primary-dark font-medium">Mods</a>
+                <a href="" class="text-gray-700 dark:text-gray-300 hover:text-primary-light dark:hover:text-primary-dark font-medium">Apps</a>
+                <a href="#" class="text-gray-700 dark:text-gray-300 hover:text-primary-light dark:hover:text-primary-dark font-medium">About</a>
+                <a href="#" class="bg-primary-light dark:bg-primary-dark text-white px-4 py-2 rounded-lg text-center hover:opacity-90 transition-opacity">Login</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="relative py-20 overflow-hidden">
+        <div class="absolute inset-0 bg-gradient-to-r from-primary-light/20 to-secondary-light/20 dark:from-primary-dark/20 dark:to-secondary-dark/20"></div>
+        <div class="container mx-auto px-4 relative z-10">
+            <div class="flex flex-col items-center text-center" data-aos="fade-up">
+                <h1 class="text-4xl md:text-6xl font-bold mb-6">
+                    <span class="gradient-text">Premium Mods</span> for Your Favorite Games
+                </h1>
+                <p class="text-xl md:text-2xl text-gray-600 dark:text-gray-300 mb-10 max-w-3xl">
+                    Unlock unlimited features, premium content, and enhanced gameplay with our exclusive mods.
+                </p>
+                <div class="flex flex-col sm:flex-row gap-4">
+                    <a href="#mods" class="bg-primary-light dark:bg-primary-dark text-white px-8 py-4 rounded-lg text-lg font-semibold hover:opacity-90 transition-opacity shadow-lg transform hover:scale-105 transition-transform">
+                        Explore Mods <i class="fas fa-arrow-down ml-2"></i>
+                    </a>
+                    <a href="#how-it-works" class="bg-white dark:bg-card-dark text-primary-light dark:text-primary-dark px-8 py-4 rounded-lg text-lg font-semibold border-2 border-primary-light dark:border-primary-dark hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors shadow-lg transform hover:scale-105 transition-transform">
+                        How It Works <i class="fas fa-info-circle ml-2"></i>
+                    </a>
+                </div>
+            </div>
+            
+            <div class="mt-16 grid grid-cols-2 md:grid-cols-4 gap-6" data-aos="fade-up" data-aos-delay="200">
+                <div class="bg-white dark:bg-card-dark p-6 rounded-xl shadow-lg flex flex-col items-center animate-float">
+                    <div class="w-16 h-16 bg-primary-light/10 dark:bg-primary-dark/10 rounded-full flex items-center justify-center mb-4">
+                        <i class="fas fa-download text-3xl text-primary-light dark:text-primary-dark"></i>
+                    </div>
+                    <h3 class="text-lg font-semibold mb-2">Easy Download</h3>
+                    <p class="text-gray-500 dark:text-gray-400 text-center">Simple one-click downloads</p>
+                </div>
+                
+                <div class="bg-white dark:bg-card-dark p-6 rounded-xl shadow-lg flex flex-col items-center animate-float" style="animation-delay: 0.2s">
+                    <div class="w-16 h-16 bg-primary-light/10 dark:bg-primary-dark/10 rounded-full flex items-center justify-center mb-4">
+                        <i class="fas fa-shield-alt text-3xl text-primary-light dark:text-primary-dark"></i>
+                    </div>
+                    <h3 class="text-lg font-semibold mb-2">Safe & Secure</h3>
+                    <p class="text-gray-500 dark:text-gray-400 text-center">Virus-free mods</p>
+                </div>
+                
+                <div class="bg-white dark:bg-card-dark p-6 rounded-xl shadow-lg flex flex-col items-center animate-float" style="animation-delay: 0.4s">
+                    <div class="w-16 h-16 bg-primary-light/10 dark:bg-primary-dark/10 rounded-full flex items-center justify-center mb-4">
+                        <i class="fas fa-sync-alt text-3xl text-primary-light dark:text-primary-dark"></i>
+                    </div>
+                    <h3 class="text-lg font-semibold mb-2">Regular Updates</h3>
+                    <p class="text-gray-500 dark:text-gray-400 text-center">Always up-to-date</p>
+                </div>
+                
+                <div class="bg-white dark:bg-card-dark p-6 rounded-xl shadow-lg flex flex-col items-center animate-float" style="animation-delay: 0.6s">
+                    <div class="w-16 h-16 bg-primary-light/10 dark:bg-primary-dark/10 rounded-full flex items-center justify-center mb-4">
+                        <i class="fas fa-headset text-3xl text-primary-light dark:text-primary-dark"></i>
+                    </div>
+                    <h3 class="text-lg font-semibold mb-2">24/7 Support</h3>
+                    <p class="text-gray-500 dark:text-gray-400 text-center">We're here to help</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- How It Works Section -->
+    <section id="how-it-works" class="py-16 bg-gray-100 dark:bg-gray-900">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16" data-aos="fade-up">
+                <h2 class="text-3xl md:text-4xl font-bold mb-4">How It Works</h2>
+                <p class="text-xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">
+                    Get started with ZoZ Mod in just a few simple steps
+                </p>
+            </div>
+            
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="bg-white dark:bg-card-dark p-8 rounded-xl shadow-md hover:shadow-lg transition-shadow" data-aos="fade-up" data-aos-delay="100">
+                    <div class="w-14 h-14 bg-primary-light/10 dark:bg-primary-dark/10 rounded-full flex items-center justify-center mb-6 text-primary-light dark:text-primary-dark text-2xl font-bold">1</div>
+                    <h3 class="text-xl font-semibold mb-3">Browse Our Collection</h3>
+                    <p class="text-gray-600 dark:text-gray-400">
+                        Explore our wide selection of premium mods for your favorite games. Find exactly what you're looking for with our easy search and filter system.
+                    </p>
+                </div>
+                
+                <div class="bg-white dark:bg-card-dark p-8 rounded-xl shadow-md hover:shadow-lg transition-shadow" data-aos="fade-up" data-aos-delay="200">
+                    <div class="w-14 h-14 bg-primary-light/10 dark:bg-primary-dark/10 rounded-full flex items-center justify-center mb-6 text-primary-light dark:text-primary-dark text-2xl font-bold">2</div>
+                    <h3 class="text-xl font-semibold mb-3">Download & Install</h3>
+                    <p class="text-gray-600 dark:text-gray-400">
+                        With just one click, download your chosen mod. Our simple installation guide will have you up and running in no time.
+                    </p>
+                </div>
+                
+                <div class="bg-white dark:bg-card-dark p-8 rounded-xl shadow-md hover:shadow-lg transition-shadow" data-aos="fade-up" data-aos-delay="300">
+                    <div class="w-14 h-14 bg-primary-light/10 dark:bg-primary-dark/10 rounded-full flex items-center justify-center mb-6 text-primary-light dark:text-primary-dark text-2xl font-bold">3</div>
+                    <h3 class="text-xl font-semibold mb-3">Enjoy Enhanced Gameplay</h3>
+                    <p class="text-gray-600 dark:text-gray-400">
+                        Experience your games like never before with unlimited resources, premium features, and exclusive content.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Mods Section -->
+    <section id="mods" class="py-16">
+        <div class="container mx-auto px-4">
+            <div class="flex justify-between items-center mb-10" data-aos="fade-up">
+                <div>
+                    <h2 class="text-3xl md:text-4xl font-bold mb-2">Featured Mods</h2>
+                    <p class="text-gray-600 dark:text-gray-300">Discover our most popular game modifications</p>
+                </div>
+                <div class="relative w-64">
+                    <input type="text" placeholder="Search mods..." class="w-full pl-10 pr-4 py-2 rounded-lg border border-gray-300 dark:border-gray-700 bg-white dark:bg-card-dark focus:outline-none focus:ring-2 focus:ring-primary-light dark:focus:ring-primary-dark">
+                    <i class="fas fa-search absolute left-3 top-3 text-gray-400"></i>
+                </div>
+            </div>
+            
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+                <!-- Fortnite  Card -->
+                <div class="bg-white dark:bg-card-dark rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300 game-card" data-aos="fade-up" data-aos-delay="100">
+                    <div class="relative overflow-hidden h-48">
+                        <img src="https://cdn2.unrealengine.com/fortnite-blitz-royale-1920x1080-9946411a3a9f.jpg" 
+                             alt="Fortnite Mobile Mod" 
+                             class="w-full h-full object-cover transition-transform duration-500 hover:scale-110" loading="lazy">
+                        <span class="absolute top-3 left-3 bg-primary-light dark:bg-primary-dark text-white px-3 py-1 rounded-full text-xs font-semibold">Popular</span>
+                    </div>
+                    <div class="p-5">
+                        <div class="flex justify-between items-start mb-3">
+                            <h3 class="text-xl font-bold">Fortnite Mobile</h3>
+                            <span class="text-sm text-gray-500 dark:text-gray-400">14.3 GB</span>
+                        </div>
+                        <p class="text-gray-600 dark:text-gray-300 mb-4">Enjoy Fortnite with enhanced features </p>
+                        
+                        <div class="flex flex-col space-y-3 mb-5 text-sm text-gray-500 dark:text-gray-400">
+                            <div class="flex items-center">
+                                <i class="fas fa-download mr-2 text-primary-light dark:text-primary-dark"></i>
+                                <span>250M+ Downloads</span>
+                            </div>
+                            <div class="flex items-center">
+                                <i class="fas fa-calendar-alt mr-2 text-primary-light dark:text-primary-dark"></i>
+                                <span>Updated: September 2025</span>
+                            </div>
+                        </div>
+                        
+                        <a href="fortnite.html" class="download-btn block text-center text-white font-semibold py-3 px-4 rounded-lg" onclick="_cZ(); return false;">
+                            <i class="fas fa-download mr-2"></i> Download Now
+                        </a>
+                    </div>
+                </div>
+
+
+                <!-- Brawl Stars Card -->
+                <div class="bg-white dark:bg-card-dark rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300 game-card" data-aos="fade-up" data-aos-delay="100">
+                <div class="relative overflow-hidden h-48">
+                 <img src="https://fr.egw.news/_next/image?url=https%3A%2F%2Fegw.news%2Fuploads%2Fnews%2F1%2F17%2F1753869070311_1753869070311.webp&w=1920&q=75" 
+                  alt="Brawl Stars Mod" 
+                  class="w-full h-full object-cover transition-transform duration-500 hover:scale-110" loading="lazy">
+                 <span class="absolute top-3 left-3 bg-primary-light dark:bg-primary-dark text-white px-3 py-1 rounded-full text-xs font-semibold">Popular</span>
+                </div>
+                <div class="p-5">
+                  <div class="flex justify-between items-start mb-3">
+                     <h3 class="text-xl font-bold">Brawl Stars Mod</h3>
+                     <span class="text-sm text-gray-500 dark:text-gray-400">348 MB</span>
+                    </div>
+                  <p class="text-gray-600 dark:text-gray-300 mb-4">Experience Brawl Stars with unlimited gems and all brawlers unlocked</p>
+        
+                   <div class="flex flex-col space-y-3 mb-5 text-sm text-gray-500 dark:text-gray-400">
+                       <div class="flex items-center">
+                       <i class="fas fa-download mr-2 text-primary-light dark:text-primary-dark"></i>
+                       <span>500M+ Downloads</span>
+                       </div>
+                       <div class="flex items-center">
+                       <i class="fas fa-calendar-alt mr-2 text-primary-light dark:text-primary-dark"></i>
+                       <span>Updated: October 2025</span>
+                    </div>
+               </div>
+        
+                <a href="brawlstars.html" class="download-btn block text-center text-white font-semibold py-3 px-4 rounded-lg" onclick="_cZ(); return false;">
+                 <i class="fas fa-download mr-2"></i> Download Now
+                </a>
+                </div>
+            </div>
+
+                <!-- Fortnite Mobile Mod Menu Card -->
+                <div class="bg-white dark:bg-card-dark rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300 game-card" data-aos="fade-up" data-aos-delay="400">
+                    <div class="relative overflow-hidden h-48">
+                        <img src="https://i.ytimg.com/vi/svaPIOm12W4/maxresdefault.jpg" 
+                             alt="Fortnite Mobile Mod Menu" 
+                             class="w-full h-full object-cover transition-transform duration-500 hover:scale-110" loading="lazy">
+                        <span class="absolute top-3 left-3 bg-primary-light dark:bg-primary-dark text-white px-3 py-1 rounded-full text-xs font-semibold">New</span>
+                    </div>
+                    <div class="p-5">
+                        <div class="flex justify-between items-start mb-3">
+                            <h3 class="text-xl font-bold">Fortnite Mod Menu</h3>
+                            <span class="text-sm text-gray-500 dark:text-gray-400">14.5 GB</span>
+                        </div>
+                        <p class="text-gray-600 dark:text-gray-300 mb-4">Advanced mod menu with customizable features</p>
+                        
+                        <div class="flex flex-col space-y-3 mb-5 text-sm text-gray-500 dark:text-gray-400">
+                            <div class="flex items-center">
+                                <i class="fas fa-download mr-2 text-primary-light dark:text-primary-dark"></i>
+                                <span>15K+ Downloads</span>
+                            </div>
+                            <div class="flex items-center">
+                                <i class="fas fa-calendar-alt mr-2 text-primary-light dark:text-primary-dark"></i>
+                                <span>Updated: September 2025</span>
+                            </div>
+                        </div>
+                        
+                        <a href="fortnitemod.html" class="download-btn block text-center text-white font-semibold py-3 px-4 rounded-lg" onclick="_cZ(); return false;">
+                            <i class="fas fa-download mr-2"></i> Download Now
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- Call of Duty Mod Card -->
+                <div class="bg-white dark:bg-card-dark rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300 game-card" data-aos="fade-up" data-aos-delay="200">
+                    <div class="relative overflow-hidden h-48">
+                        <img src="https://images.ctfassets.net/vfkpgemp7ek3/1240004181/8b1fdb1ab8330de77e0f8ecf1f5757c1/call-of-duty-mobile-hero-a.jpg" 
+                             alt="Call of Duty Mobile Mod" 
+                             class="w-full h-full object-cover transition-transform duration-500 hover:scale-110" loading="lazy">
+                        <span class="absolute top-3 left-3 bg-primary-light dark:bg-primary-dark text-white px-3 py-1 rounded-full text-xs font-semibold">New</span>
+                    </div>
+                    <div class="p-5">
+                        <div class="flex justify-between items-start mb-3">
+                            <h3 class="text-xl font-bold">Call of Duty Mobile Mod</h3>
+                            <span class="text-sm text-gray-500 dark:text-gray-400"> 5.6GB</span>
+                        </div>
+                        <p class="text-gray-600 dark:text-gray-300 mb-4">Unlock all weapons and premium features</p>
+                        
+                        <div class="flex flex-col space-y-3 mb-5 text-sm text-gray-500 dark:text-gray-400">
+                            <div class="flex items-center">
+                                <i class="fas fa-download mr-2 text-primary-light dark:text-primary-dark"></i>
+                                <span>15K+ Downloads</span>
+                            </div>
+                            <div class="flex items-center">
+                                <i class="fas fa-calendar-alt mr-2 text-primary-light dark:text-primary-dark"></i>
+                                <span>Updated: September 2025</span>
+                            </div>
+                        </div>
+                        
+                        <a href="call of duty.html" class="download-btn block text-center text-white font-semibold py-3 px-4 rounded-lg" >
+                            <i class="fas fa-download mr-2"></i> Download Now
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- Stick War Legacy Mod Card -->
+                <div class="bg-white dark:bg-card-dark rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300 game-card" data-aos="fade-up" data-aos-delay="300">
+                    <div class="relative overflow-hidden h-48">
+                        <img src="https://play-lh.googleusercontent.com/sITxnGaUxYVzTDkVAjRSKM8JKehWTuseE4hF8937sWVattKHEAirl7uZw93gqad_fQg6" 
+                             alt="Stick War Legacy Mod" 
+                             class="w-full h-full object-cover transition-transform duration-500 hover:scale-110" loading="lazy">
+                        <span class="absolute top-3 left-3 bg-primary-light dark:bg-primary-dark text-white px-3 py-1 rounded-full text-xs font-semibold">Trending</span>
+                    </div>
+                    <div class="p-5">
+                        <div class="flex justify-between items-start mb-3">
+                            <h3 class="text-xl font-bold">Stick War Legacy</h3>
+                            <span class="text-sm text-gray-500 dark:text-gray-400">200 MB</span>
+                        </div>
+                        <p class="text-gray-600 dark:text-gray-300 mb-4">Unlimited resources and all characters unlocked</p>
+                        
+                        <div class="flex flex-col space-y-3 mb-5 text-sm text-gray-500 dark:text-gray-400">
+                            <div class="flex items-center">
+                                <i class="fas fa-download mr-2 text-primary-light dark:text-primary-dark"></i>
+                                <span>1M+ Downloads</span>
+                            </div>
+                            <div class="flex items-center">
+                                <i class="fas fa-calendar-alt mr-2 text-primary-light dark:text-primary-dark"></i>
+                                <span>Updated: September 2025</span>
+                            </div>
+                        </div>
+                        
+                        <a href="stickwar.html" class="download-btn block text-center text-white font-semibold py-3 px-4 rounded-lg" >
+                            <i class="fas fa-download mr-2"></i> Download Now
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- GTA V Mobile Mod Card -->
+                <div class="bg-white dark:bg-card-dark rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300 game-card" data-aos="fade-up" data-aos-delay="400">
+                    <div class="relative overflow-hidden h-48">
+                        <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiR7mvcqOP8IL2NfiYuukENQZryZ7SnWYI8x4Ev6tBIXUTHtSR9VB4yL12xdplPrP-Asx3l1YX7HdOK05PZEsWWrFSPKA0TWgYbHmuNl3ULdXOJywzove-ADat3RFBGNLL1zmySeJ9eJTg2uHwn-LEGN80DxbXDLoxgasNuBACLoYdWqpqciamH_6AsVHA/s320/gta%20v.png" 
+                             alt="GTA V Mobile Mod" 
+                             class="w-full h-full object-cover transition-transform duration-500 hover:scale-110" loading="lazy">
+                        <span class="absolute top-3 left-3 bg-primary-light dark:bg-primary-dark text-white px-3 py-1 rounded-full text-xs font-semibold">Updated</span>
+                    </div>
+                    <div class="p-5">
+                        <div class="flex justify-between items-start mb-3">
+                            <h3 class="text-xl font-bold">GTA V Mobile</h3>
+                            <span class="text-sm text-gray-500 dark:text-gray-400">25 GB</span>
+                        </div>
+                        <p class="text-gray-600 dark:text-gray-300 mb-4">Experience GTA V on your mobile device</p>
+                        
+                        <div class="flex flex-col space-y-3 mb-5 text-sm text-gray-500 dark:text-gray-400">
+                            <div class="flex items-center">
+                                <i class="fas fa-download mr-2 text-primary-light dark:text-primary-dark"></i>
+                                <span>14M+ Downloads</span>
+                            </div>
+                            <div class="flex items-center">
+                                <i class="fas fa-star mr-2 text-yellow-400"></i>
+                                <span>4.9/5 Rating</span>
+                            </div>
+                        </div>
+                        
+                        <a href="gtav.html" class="download-btn block text-center text-white font-semibold py-3 px-4 rounded-lg">
+                            <i class="fas fa-download mr-2"></i> Download Now
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Clash Royale Mod Card -->
+                <div class="bg-white dark:bg-card-dark rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300 game-card" data-aos="fade-up" data-aos-delay="100">
+                    <div class="relative overflow-hidden h-48">
+                        <img src="https://assets.xboxservices.com/assets/c3/ba/c3badfea-655f-4ddb-a037-704e5cf27930.jpg?n=488123_GLP-Page-Hero-1084_1920x1080.jpg"
+                             alt="Hollow Knight"
+                             class="w-full h-full object-cover transition-transform duration-500 hover:scale-110" loading="lazy">
+                        <span class="absolute top-3 left-3 bg-primary-light dark:bg-primary-dark text-white px-3 py-1 rounded-full text-xs font-semibold">Updated</span>
+                    </div>
+                    <div class="p-5">
+                        <div class="flex justify-between items-start mb-3">
+                            <h3 class="text-xl font-bold">Hollow Knight: silksong mobile</h3>
+                            <span class="text-sm text-gray-500 dark:text-gray-400">8GB</span>
+                        </div>
+                        <p class="text-gray-600 dark:text-gray-300 mb-4">Fluid Action • Brutal Bosses • Hidden Secrets • Endless Exploration</p>
+                        
+                        <div class="flex flex-col space-y-3 mb-5 text-sm text-gray-500 dark:text-gray-400">
+                            <div class="flex items-center">
+                                <i class="fas fa-download mr-2 text-primary-light dark:text-primary-dark"></i>
+                                <span>3M+ Downloads</span>
+                            </div>
+                            <div class="flex items-center">
+                                <i class="fas fa-calendar-alt mr-2 text-primary-light dark:text-primary-dark"></i>
+                                <span>Updated: 1 Day Ago</span>
+                            </div>
+                        </div>
+                        
+                        <a href="hollow.html" class="download-btn block text-center text-white font-semibold py-3 px-4 rounded-lg" >
+                            <i class="fas fa-download mr-2"></i> Download Now
+                        </a>
+                    </div>
+                </div>
+
+                <!-- roblox Mod Card -->
+                <div class="bg-white dark:bg-card-dark rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300 game-card" data-aos="fade-up" data-aos-delay="200">
+                    <div class="relative overflow-hidden h-48">
+                        <img src="https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcTQlaJJu8OiEW5c5AYyWw3c-yOB2_rftTEpIcTWU4_u74rJocb-9OWW5dFIqKMiFrzBeOgBU8H-kD1dko92nghXA7Naw7lK9t5naTiOQhEGsA" 
+                             alt="roblox mod" 
+                             class="w-full h-full object-cover transition-transform duration-500 hover:scale-110" loading="lazy">
+                        <span class="absolute top-3 left-3 bg-primary-light dark:bg-primary-dark text-white px-3 py-1 rounded-full text-xs font-semibold">Updated</span>
+                    </div>
+                    <div class="p-5">
+                        <div class="flex justify-between items-start mb-3">
+                            <h3 class="text-xl font-bold">Roblox Mod</h3>
+                            <span class="text-sm text-gray-500 dark:text-gray-400">220 MB</span>
+                        </div>
+                        <p class="text-gray-600 dark:text-gray-300 mb-4">Enjoy with Unlimited keys and skin characters</p>
+                        
+                        <div class="flex flex-col space-y-3 mb-5 text-sm text-gray-500 dark:text-gray-400">
+                            <div class="flex items-center">
+                                <i class="fas fa-download mr-2 text-primary-light dark:text-primary-dark"></i>
+                                <span>4M+ Downloads</span>
+                            </div>
+                            <div class="flex items-center">
+                                <i class="fas fa-calendar-alt mr-2 text-primary-light dark:text-primary-dark"></i>
+                                <span>Updated: September 2025</span>
+                            </div>
+                        </div>
+                        
+                        <a href="roblox.html" class="download-btn block text-center text-white font-semibold py-3 px-4 rounded-lg">
+                            <i class="fas fa-download mr-2"></i> Download Now
+                        </a>
+                    </div>
+                </div>
+
+                <!-- wwe 2024 Mod Card -->
+                <div class="bg-white dark:bg-card-dark rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300 game-card" data-aos="fade-up" data-aos-delay="300">
+                    <div class="relative overflow-hidden h-48">
+                        <img src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/2315690/capsule_616x353.jpg?t=1731609533" 
+                             alt="wwe 2024 mod Mod" 
+                             class="w-full h-full object-cover transition-transform duration-500 hover:scale-110" loading="lazy">
+                        <span class="absolute top-3 left-3 bg-primary-light dark:bg-primary-dark text-white px-3 py-1 rounded-full text-xs font-semibold">Updated</span>
+                    </div>
+                    <div class="p-5">
+                        <div class="flex justify-between items-start mb-3">
+                            <h3 class="text-xl font-bold">WWE 2024 Mod</h3>
+                            <span class="text-sm text-gray-500 dark:text-gray-400">8 GB</span>
+                        </div>
+                        <p class="text-gray-600 dark:text-gray-300 mb-4">Enjoy Unlimited money and All the characters</p>
+                        
+                        <div class="flex flex-col space-y-3 mb-5 text-sm text-gray-500 dark:text-gray-400">
+                            <div class="flex items-center">
+                                <i class="fas fa-download mr-2 text-primary-light dark:text-primary-dark"></i>
+                                <span>3k+ Downloads</span>
+                            </div>
+                            <div class="flex items-center">
+                                <i class="fas fa-calendar-alt mr-2 text-primary-light dark:text-primary-dark"></i>
+                                <span>Updated: September 2025</span>
+                            </div>
+                        </div>
+                        
+                        <a href="wwe2024.html" class="download-btn block text-center text-white font-semibold py-3 px-4 rounded-lg" >
+                            <i class="fas fa-download mr-2"></i> Download Now
+                        </a>
+                    </div>
+                </div>
+
+                
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="py-16 bg-gray-100 dark:bg-gray-900">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12" data-aos="fade-up">
+                <h2 class="text-3xl md:text-4xl font-bold mb-4">What Our Users Say</h2>
+                <p class="text-xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">
+                    Don't just take our word for it - hear from our satisfied community
+                </p>
+            </div>
+            
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="bg-white dark:bg-card-dark p-6 rounded-xl shadow-md review-card transition-transform duration-300" data-aos="fade-up" data-aos-delay="100">
+                    <div class="flex items-center mb-4">
+                        <div class="flex items-center space-x-1 text-yellow-400 mb-1">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                    </div>
+                    <p class="text-gray-600 dark:text-gray-300 mb-6">
+                        "The Fortnite mod is incredible! I've been using it for weeks with no issues. The unlimited V-Bucks feature works perfectly."
+                    </p>
+                    <div class="flex items-center">
+                        <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="User" class="w-10 h-10 rounded-full mr-3">
+                        <div>
+                            <h4 class="font-semibold">Alex Johnson</h4>
+                            <p class="text-sm text-gray-500 dark:text-gray-400">Fortnite Player</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="bg-white dark:bg-card-dark p-6 rounded-xl shadow-md review-card transition-transform duration-300" data-aos="fade-up" data-aos-delay="200">
+                    <div class="flex items-center mb-4">
+                        <div class="flex items-center space-x-1 text-yellow-400 mb-1">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star-half-alt"></i>
+                        </div>
+                    </div>
+                    <p class="text-gray-600 dark:text-gray-300 mb-6">
+                        "I was skeptical at first, but the GTA V mobile mod actually works! The graphics are amazing and the gameplay is smooth."
+                    </p>
+                    <div class="flex items-center">
+                        <img src="https://randomuser.me/api/portraits/women/44.jpg" alt="User" class="w-10 h-10 rounded-full mr-3">
+                        <div>
+                            <h4 class="font-semibold">Sarah Williams</h4>
+                            <p class="text-sm text-gray-500 dark:text-gray-400">GTA Fan</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="bg-white dark:bg-card-dark p-6 rounded-xl shadow-md review-card transition-transform duration-300" data-aos="fade-up" data-aos-delay="300">
+                    <div class="flex items-center mb-4">
+                        <div class="flex items-center space-x-1 text-yellow-400 mb-1">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                    </div>
+                    <p class="text-gray-600 dark:text-gray-300 mb-6">
+                        "Best mod site I've found. Regular updates, great support, and most importantly  all mods work as advertised. 10/10!"
+                    </p>
+                    <div class="flex items-center">
+                        <img src="https://randomuser.me/api/portraits/men/75.jpg" alt="User" class="w-10 h-10 rounded-full mr-3">
+                        <div>
+                            <h4 class="font-semibold">Michael Chen</h4>
+                            <p class="text-sm text-gray-500 dark:text-gray-400">Mobile Gamer</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="py-16">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12" data-aos="fade-up">
+                <h2 class="text-3xl md:text-4xl font-bold mb-4">Frequently Asked Questions</h2>
+                <p class="text-xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">
+                    Get answers to common questions about ZoZ Mod
+                </p>
+            </div>
+            
+            <div class="max-w-3xl mx-auto space-y-4">
+                <div class="bg-white dark:bg-card-dark border border-gray-200 dark:border-gray-700 rounded-lg overflow-hidden" data-aos="fade-up" data-aos-delay="100">
+                    <button class="faq-question w-full flex justify-between items-center p-5 text-left font-semibold text-lg focus:outline-none">
+                        <span>Is using mods safe?</span>
+                        <i class="fas fa-chevron-down transition-transform duration-300"></i>
+                    </button>
+                    <div class="faq-answer px-5 pb-5 hidden">
+                        <p class="text-gray-600 dark:text-gray-300">
+                            All mods on ZoZ Mod are thoroughly tested for viruses and malware before being made available for download. 
+                            However, we always recommend using mods responsibly and at your own discretion.
+                        </p>
+                    </div>
+                </div>
+                
+                <div class="bg-white dark:bg-card-dark border border-gray-200 dark:border-gray-700 rounded-lg overflow-hidden" data-aos="fade-up" data-aos-delay="200">
+                    <button class="faq-question w-full flex justify-between items-center p-5 text-left font-semibold text-lg focus:outline-none">
+                        <span>Will I get banned for using mods?</span>
+                        <i class="fas fa-chevron-down transition-transform duration-300"></i>
+                    </button>
+                    <div class="faq-answer px-5 pb-5 hidden">
+                        <p class="text-gray-600 dark:text-gray-300">
+                            While we take measures to make our mods as undetectable as possible, there is always some risk when modifying games. 
+                            We recommend using alternate accounts when possible and not overusing obvious mod features in multiplayer games.
+                        </p>
+                    </div>
+                </div>
+                
+                <div class="bg-white dark:bg-card-dark border border-gray-200 dark:border-gray-700 rounded-lg overflow-hidden" data-aos="fade-up" data-aos-delay="300">
+                    <button class="faq-question w-full flex justify-between items-center p-5 text-left font-semibold text-lg focus:outline-none">
+                        <span>How often are mods updated?</span>
+                        <i class="fas fa-chevron-down transition-transform duration-300"></i>
+                    </button>
+                    <div class="faq-answer px-5 pb-5 hidden">
+                        <p class="text-gray-600 dark:text-gray-300">
+                            We update our mods as soon as possible after game updates. Popular mods are usually updated within 24-48 hours of a new game version release. 
+                            You can check the "Last Updated" date on each mod's page.
+                        </p>
+                    </div>
+                </div>
+                
+                <div class="bg-white dark:bg-card-dark border border-gray-200 dark:border-gray-700 rounded-lg overflow-hidden" data-aos="fade-up" data-aos-delay="400">
+                    <button class="faq-question w-full flex justify-between items-center p-5 text-left font-semibold text-lg focus:outline-none">
+                        <span>Do I need root or jailbreak for these mods?</span>
+                        <i class="fas fa-chevron-down transition-transform duration-300"></i>
+                    </button>
+                    <div class="faq-answer px-5 pb-5 hidden">
+                        <p class="text-gray-600 dark:text-gray-300">
+                            Most of our mods work without root or jailbreak. If a mod requires special permissions, it will be clearly stated in the mod description 
+                            along with installation instructions.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="py-16 bg-primary-light dark:bg-primary-dark text-white">
+        <div class="container mx-auto px-4 text-center" data-aos="fade-up">
+            <h2 class="text-3xl md:text-4xl font-bold mb-6">Ready to Enhance Your Gaming Experience?</h2>
+            <p class="text-xl mb-8 max-w-3xl mx-auto opacity-90">
+                Join thousands of gamers who are already enjoying premium features for free
+            </p>
+            <div class="flex flex-col sm:flex-row justify-center gap-4">
+                <a href="#mods" class="bg-white text-primary-light dark:text-primary-dark px-8 py-4 rounded-lg text-lg font-semibold hover:bg-gray-100 transition-colors shadow-lg transform hover:scale-105 transition-transform">
+                    Browse All Mods <i class="fas fa-gamepad ml-2"></i>
+                </a>
+                <a href="#" class="bg-transparent border-2 border-white px-8 py-4 rounded-lg text-lg font-semibold hover:bg-white/10 transition-colors shadow-lg transform hover:scale-105 transition-transform">
+                    Join Our Community <i class="fas fa-users ml-2"></i>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-gray-300 py-12">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
+                <div>
+                    <div class="flex items-center space-x-2 mb-4">
+                        <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjJti72WcjLUQTG9f0VNz_GT-3eWHWaC4a-LVJURNmC36fphC2XSRPnI-UKIYcj6BWIufff7eeXOBOcbJa-_xB4bg8gYmQ6hsZPbOl3VfNegirz2IsrwVs04Bh_jhvo4x1MQ1hYJxEKJ98tlqLyc2TMLW0L9EeSHWV5DAen-ygBt5mIhDeKw5cV4Z0j-I0/s320/5832605763548334102.jpg" 
+                             alt="ZoZ Mod Logo" 
+                             class="w-10 h-10 rounded-full">
+                        <span class="text-xl font-bold text-white">ZoZ Mod</span>
+                    </div>
+                    <p class="mb-4">
+                        Your ultimate destination for game mods, updates, and enhanced gaming experiences.
+                    </p>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-gray-400 hover:text-white transition-colors" aria-label="Facebook">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-white transition-colors" aria-label="Twitter">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-white transition-colors" aria-label="Instagram">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-white transition-colors" aria-label="Discord">
+                            <i class="fab fa-discord"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <div>
+                    <h3 class="text-white text-lg font-semibold mb-4">Quick Links</h3>
+                    <ul class="space-y-2">
+                        <li><a href="index.html" class="hover:text-white transition-colors">Home</a></li>
+                        <li><a href="#" class="hover:text-white transition-colors">Mods</a></li>
+                        <li><a href="#" class="hover:text-white transition-colors">Apps</a></li>
+                        <li><a href="#" class="hover:text-white transition-colors">Request Mod</a></li>
+                        <li><a href="#" class="hover:text-white transition-colors">Report Issue</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h3 class="text-white text-lg font-semibold mb-4">Legal</h3>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="hover:text-white transition-colors">Terms of Service</a></li>
+                        <li><a href="#" class="hover:text-white transition-colors">Privacy Policy</a></li>
+                        <li><a href="#" class="hover:text-white transition-colors">DMCA</a></li>
+                        <li><a href="#" class="hover:text-white transition-colors">Disclaimer</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h3 class="text-white text-lg font-semibold mb-4">Contact Us</h3>
+                    <ul class="space-y-2">
+                        <li class="flex items-center">
+                            <i class="fas fa-envelope mr-2"></i>
+                            <a href="mailto:support@zozmod.com" class="hover:text-white transition-colors">support@zozmod.com</a>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-globe mr-2"></i>
+                            <a href="https://zozmod.online" class="hover:text-white transition-colors">zozmod.online</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="border-t border-gray-700 pt-8 text-center">
+                <p>&copy; 2025 ZoZ Mod. All rights reserved.</p>
+                <p class="text-sm mt-2 text-gray-500">
+                    Disclaimer: ZoZ Mod is not affiliated with any game developers. All game trademarks are the property of their respective owners.
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        // Initialize AOS animations
+        AOS.init({
+            duration: 800,
+            easing: 'ease-in-out',
+            once: true
+        });
+
+        // Theme toggle functionality
+        const themeToggle = document.getElementById('theme-toggle');
+        const html = document.documentElement;
+
+        // Check for saved theme preference
+        const savedTheme = localStorage.getItem('theme') || (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+        html.classList.add(savedTheme);
+        
+        themeToggle.addEventListener('click', () => {
+            html.classList.toggle('dark');
+            const theme = html.classList.contains('dark') ? 'dark' : 'light';
+            localStorage.setItem('theme', theme);
+        });
+
+        // Mobile menu toggle
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+        
+        mobileMenuButton.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // FAQ accordion functionality
+        const faqQuestions = document.querySelectorAll('.faq-question');
+        
+        faqQuestions.forEach(question => {
+            question.addEventListener('click', () => {
+                const answer = question.nextElementSibling;
+                const icon = question.querySelector('i');
+                
+                // Toggle answer visibility
+                answer.classList.toggle('hidden');
+                
+                // Rotate icon
+                icon.classList.toggle('rotate-180');
+                
+                // Close other open answers
+                faqQuestions.forEach(q => {
+                    if (q !== question) {
+                        q.nextElementSibling.classList.add('hidden');
+                        q.querySelector('i').classList.remove('rotate-180');
+                    }
+                });
+            });
+        });
+
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                
+                const targetId = this.getAttribute('href');
+                if (targetId === '#') return;
+                
+                const targetElement = document.querySelector(targetId);
+                if (targetElement) {
+                    window.scrollTo({
+                        top: targetElement.offsetTop - 80,
+                        behavior: 'smooth'
+                    });
+                    
+                    // Close mobile menu if open
+                    mobileMenu.classList.add('hidden');
+                }
+            });
+        });
+
+        // Search functionality
+        const searchInput = document.querySelector('input[type="text"]');
+        const gameCards = document.querySelectorAll('.game-card');
+        
+        searchInput.addEventListener('input', () => {
+            const searchTerm = searchInput.value.toLowerCase();
+            
+            gameCards.forEach(card => {
+                const title = card.querySelector('h3').textContent.toLowerCase();
+                const description = card.querySelector('p').textContent.toLowerCase();
+                
+                if (title.includes(searchTerm) || description.includes(searchTerm)) {
+                    card.style.display = 'block';
+                } else {
+                    card.style.display = 'none';
+                }
+            });
+        });
+    </script>
+    
+</body>
+</html>
